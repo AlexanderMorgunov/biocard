@@ -78,7 +78,7 @@
 
 ```
 bash
-git clone [repository-url]
+git clone https://github.com/AlexanderMorgunov/biocard.git
 ```
 
 - Установить зависимости:
