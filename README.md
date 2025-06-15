@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Инструмент для визуализации выравнивания аминокислотных последовательностей
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта
 
-Currently, two official plugins are available:
+Этот проект представляет собой веб-инструмент для визуального сравнения аминокислотных последовательностей.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Деплой по ссылке:
 
-## Expanding the ESLint configuration
+[Ссылка](https:///)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Инструмент позволяет:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Вводить две аминокислотные последовательности
+
+- Визуально сравнивать их, выделяя различия
+
+- Копировать выделенные участки последовательностей
+
+- Искать подстроки в последовательностях
+
+### Биологический контекст
+
+В биоинформатике выравнивание последовательностей - ключевой метод для анализа белков. Этот инструмент помогает визуализировать сходства и различия между последовательностями, что важно для:
+
+- Исследования функций белков
+
+- Определения эволюционных связей
+
+- Выявления консервативных участков
+
+## Технический стек
+
+- React с TypeScript для основного функционала
+
+- Ant Design для UI-компонентов
+
+- Zustand для управления состоянием
+
+- Vite для сборки проекта
+
+- Vercel для хостинга
+
+## Функциональные возможности
+
+### Основные функции:
+
+- Ввод двух аминокислотных последовательностей с валидацией:
+
+  - Только разрешенные символы (A,R,N,D,C,E,Q,G,H,I,L,K,M,F,P,S,T,W,Y,V,-)
+
+  - Проверка одинаковой длины последовательностей
+
+- Визуализация выравнивания:
+
+  - Цветовое кодирование аминокислот по свойствам
+
+  - Подсветка различий между последовательностями
+
+- Дополнительные возможности:
+
+  - Поиск подстрок (Ctrl+F)
+
+  - Копирование выделенных участков
+
+  - Уведомления о действиях пользователя
+
+## Особенности реализации:
+
+- Поддержка встроенного поиска браузера
+
+- Доступное взаимодействие
+
+- Четкая визуальная дифференциация аминокислот
+
+## Установка и запуск
+
+- Клонировать репозиторий:
+
+```
+bash
+git clone [repository-url]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Установить зависимости:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+bash
+npm install
+```
+
+- Запустить в режиме разработки:
+
+```
+bash
+npm run dev
+Собрать production-версию:
+```
+
+```
+bash
+npm run build
+```
+
+## Лицензия
+
+MIT License
