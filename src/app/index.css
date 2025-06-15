@@ -1,0 +1,75 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss";
+
+@theme {
+  --color-gray-900: #202225;
+  --color-gray-800: #2f3136;
+  --color-gray-700: #36393f;
+  --color-gray-600: #4f545c;
+  --color-gray-400: #d4d7dc;
+  --color-gray-300: #e3e5e8;
+  --color-gray-200: #ebedef;
+  --color-gray-100: #f2f3f5;
+
+  --color-primary-bg: #f8fafc;
+  --color-primary-text: #1e293b;
+  --color-action: #22c55e;
+  --color-disabled: #6b7280;
+
+  --color-hover: #3b82f6;
+  --color-active: #1d4ed8;
+  --color-disabled: #6b7280;
+
+  --color-outline-foreground: #2563eb;
+  --color-outline: #1d4ed8;
+
+  --color-error: #ef4444;
+  --color-primary: #1677ff;
+  --color-cysteine: #ffea00;
+  --color-hydrophobic: #67e4a6;
+  --color-glycine: #c4c4c4;
+  --color-negativelyCharged: #fc9cac;
+  --color-positivelyCharged: #bb99ff;
+  --color-polarUncharged: #80bfff;
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto max-w-[1920px] px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[4.375rem];
+  }
+
+  .logo {
+    @apply text-6xl font-normal leading-none md:text-9xl;
+  }
+
+  .header-1 {
+    @apply text-[1.75rem] leading-none md:text-7xl;
+  }
+
+  .header-2 {
+    @apply text-2xl leading-none md:text-5xl;
+  }
+
+  .header-3 {
+    @apply leading-none md:text-[2rem];
+  }
+
+  .header-4 {
+    @apply text-2xl leading-none;
+  }
+
+  .body-1 {
+    @apply text-xl leading-normal;
+  }
+
+  .body-2 {
+    @apply text-base leading-normal;
+  }
+
+  .body-3 {
+    @apply text-sm leading-none;
+  }
+}
